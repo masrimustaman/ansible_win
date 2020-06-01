@@ -33,11 +33,10 @@ ansible --version
 
 
 -----------------------------------
-Install Ansible Automation Tool on CentOS/RHEL 8
+Using Ansible Command
 -----------------------------------
-sudo dnf install epel-release
-sudo dnf install ansible
-ansible --version
+ansible windows -m win_shell -a "gsv"
+ansible dc -m win_command -a "ipconfig"
 
 
 
