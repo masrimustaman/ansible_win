@@ -1,0 +1,6 @@
+# check
+ansible-playbook apply_windows_updates.yml --tags check
+# install without reboot
+ansible-playbook apply_windows_updates.yml --tags install
+# install with reboot
+ansible-playbook apply_windows_updates.yml --tags install,reboot

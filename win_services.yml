@@ -1,0 +1,12 @@
+---
+- hosts: windows
+
+  tasks:
+
+   - name: Stop service bits
+
+     win_service:
+
+       name: bits
+
+       state: started
