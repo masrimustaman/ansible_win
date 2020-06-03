@@ -37,6 +37,6 @@ Using Ansible Command
 -----------------------------------
 ansible windows -m win_shell -a "gsv"
 ansible dc -m win_command -a "ipconfig"
-
+ansible-playbook playbook-name.yml
 
 
