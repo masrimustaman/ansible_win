@@ -78,5 +78,9 @@ ansible-playbook ./Windows-2019-CIS/site.yml
 #current pwd is /root/ansible-test
 ```
 
-
+#### Connect from host to vagrant guest
+```
+ssh vagrant@127.0.0.1 -p 2222
+sftp://vagrant@127.0.0.1:2222
+```
 
