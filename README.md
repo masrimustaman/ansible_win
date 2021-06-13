@@ -35,4 +35,48 @@ ansible dc -m win_command -a "ipconfig"
 ansible-playbook playbook-name.yml
 ```
 
+## Project Windows Server 2019 CIS 
+#### Creating folder for ansible
+```
+mkdir ansible-test
+```
+#### Create ansible.cfg
+`sudo vim ansible.cfg`
+```
+[defaults]
+inventory = hosts
+host_key_checking = False
+```
+
+#### Create hosts file
+`sudo vim hosts`
+```
+[windows]
+10.0.0.12
+
+[windows:vars]
+ansible_user=vagrant
+ansible_password=vagrant
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+
+```
+
+#### Clone from Git
+```
+git clone https://github.com/ansible-lockdown/Windows-2019-CIS.git
+```
+#### Edit firewall and Winrm from true to false
+```
+vim Windows-2019-CIS/defaults/main.yml
+# use ctrl v, shift I to insert, d to delete, or press : and then :'<,'>s/true/false/g to replace 
+```
+
+#### To run playbook
+```
+ansible-playbook ./Windows-2019-CIS/site.yml
+#current pwd is /root/ansible-test
+```
+
+
 
